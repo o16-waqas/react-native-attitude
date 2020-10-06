@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface Utils : NSObject
+@interface Utilities : NSObject
 
 + (double)sensorTimestampToEpochMilliseconds:(double) timestamp;
 
