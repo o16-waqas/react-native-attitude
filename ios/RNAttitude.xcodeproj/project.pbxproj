@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9941A8E4252C92F5006AD4CB /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9941A8E2252C92F5006AD4CB /* Utils.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAttitude.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAttitude.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNAttitude.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAttitude.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9941A8E2252C92F5006AD4CB /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		9941A8E3252C92F5006AD4CB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAttitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAttitude.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNAttitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAttitude.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +55,8 @@
 			children = (
 				B3E7B5881CC2AC0600A0062D /* RNAttitude.h */,
 				B3E7B5891CC2AC0600A0062D /* RNAttitude.m */,
+				9941A8E3252C92F5006AD4CB /* Utils.h */,
+				9941A8E2252C92F5006AD4CB /* Utils.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E7B58A1CC2AC0600A0062D /* RNAttitude.m in Sources */,
+				9941A8E4252C92F5006AD4CB /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

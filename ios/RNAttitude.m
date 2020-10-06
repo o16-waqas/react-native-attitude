@@ -8,6 +8,7 @@
 // https://stackoverflow.com/questions/14482518/how-multiplybyinverseofattitude-cmattitude-class-is-implemented
 // https://stackoverflow.com/questions/5782658/extracting-yaw-from-a-quaternion
 #import "RNAttitude.h"
+#import "Utils.h"
 
 #import <React/RCTAssert.h>
 #import <React/RCTBridge.h>
@@ -96,6 +97,7 @@ RCT_EXPORT_METHOD(startObserving) {
         CMDeviceMotionHandler attitudeHandler = ^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error)
         {
             long long tempMs = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
+            long long timeStampUniform = [Utils sensorTimestampToEpochMilliseconds:tempMs];
             long long timeSinceLastUpdate = (tempMs - self->lastSampleTime);
             if(timeSinceLastUpdate >= self->intervalMillis){
                 // get the current device orientation
@@ -145,7 +147,7 @@ RCT_EXPORT_METHOD(startObserving) {
                      (heading > (self->lastHeading + YAWTRIGGER)) || (heading < (self->lastHeading - YAWTRIGGER))) {
                     [self sendEventWithName:@"attitudeUpdate"
                         body:@{
-                            @"timestamp" : @(tempMs),
+                            @"timestamp" : @(timeStampUniform),
                             @"roll" : @(self->roll),
                             @"pitch": @(self->pitch),
                             @"heading": @(heading),
